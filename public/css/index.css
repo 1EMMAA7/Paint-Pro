@@ -1,0 +1,78 @@
+body {
+    background-color: #c00; /* Rojo fuerte */
+  }
+
+    
+  .frmIndex {
+    background-color: white;
+    max-width: 90%;
+    margin: 150px auto;
+    padding: 40px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 15px;
+  }
+
+  h1 {
+    color: black;
+    text-align: center;
+    font-family: 'Unispace', sans-serif;
+    font-size: 2.5rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  .frmIndex > p {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-left: 20px;
+  } 
+
+  h2 {
+    display: inline-block;
+    width: 17%;
+    vertical-align: top;
+    text-align: center;
+    margin: 40px 1%;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  h2:hover {
+    transform: translateY(-8px); /* Eleva el h2 */
+    color: #c00; /* Cambia a rojo */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    padding: 10px;
+  }
+
+   
+  h2 a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-family: 'Unispace', sans-serif;
+    display: block;
+    margin-top: 10px;
+  }
+
+    
+  h2::before {
+    content: "ℹ️";
+    display: block;
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  
+  
+  h2::after {
+    content: "Body text for whatever you’d like to say.";
+    display: block;
+    font-size: 0.8rem;
+    color: #777;
+    margin-top: 10px;
+    line-height: 1.4;
+  }
+  
