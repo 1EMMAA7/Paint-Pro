@@ -1,0 +1,41 @@
+*{
+    font-family: 'Unispace';
+}
+
+a{
+    text-decoration: none;
+}
+
+
+
+/*{
+
+    font-family: 'Unispace', sans-serif;
+    margin: auto;
+    text-align: center;
+}
+
+.frmIndex{
+    margin-top: 100px;
+}
+
+.loginForm, .registerForm{
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.btnLogin, .btnRegistrar{
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btnLogin:hover, .btnRegistrar:hover{
+    background-color: #45a049;
+}

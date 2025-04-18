@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="resources/css/style.css">
+</head>
+<body>
+    <div class="registerForm">
+        <h1>Register</h1>
+        <form action="/register" method="POST">
+            <label for="nombre">Nombre Compelto</label>
+            <input type="text" id="nombre" name="nombre" required><br><br>
+
+            <label for="telefono">Telefono</label>
+            <input type="text" id="telefono" name="telefono" required><br><br>
+
+
+            <label for="correo">Correo Electronico:</label>
+            <input type="text" id="correo" name="correo" required><br><br>
+
+
+            <label for="direccion">Domicilio</label>
+            <input type="text" id="direccion" name="direccion" required><br><br>
+
+
+            <label for="pass">Password:</label>
+            <input type="password" id="pass" name="pass" required><br><br>
+            <button type="submit" class="btnRegistrar">Registrarse</button>
+            <a href="/">Home</a>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <% if (typeof alert != "undefined") { %>
+        <script>
+            Swal.fire({
+                title:"<%= alertTitle %>",
+                text:"<%= alertMessage %>",
+                icon:"<%= alertIcon %>",
+                showConfirmationButon: <%= showConfirmButton %>,
+                timer: <%= timer %>,
+            }).then(() =>{
+                window.location = "/<%= ruta %>";
+            })
+        </script>
+      <% } %>
+
+</body>
+</html>
