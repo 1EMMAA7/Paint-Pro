@@ -1,10 +1,10 @@
 body {
-    background-color: #c00; /* Rojo fuerte */
+    background-color: #0b0f3a; /* Azul profundo */
     font-family: 'Unispace', sans-serif;
   }
 
   .container {
-    background-color: white;
+    background-color: #2e1e57; /* Violeta oscuro */
     max-width: 90%;
     margin: 150px auto;
     padding: 40px;
@@ -14,7 +14,7 @@ body {
   }
 
   h1 {
-    color: black;
+    color: #fcebbd; /* Amarillo dorado */;
     text-align: center;
     font-family: 'Unispace', sans-serif;
     font-size: 2.5rem;
@@ -26,12 +26,13 @@ body {
     font-weight: bold;
     font-size: 1.5rem;
     margin-left: 20px;
+    color: #c07eb8; /* Rosa suave */
   } 
 
   a {
     text-decoration: none;
     background-color: #222;
-    color: white;
+    color: #fcebbd; /* Amarillo suave */
     border: none;
     padding: 10px 30px;
     border-radius: 6px;
