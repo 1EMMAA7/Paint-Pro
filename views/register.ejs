@@ -4,31 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
-    <link rel="stylesheet" href="resources/css/style.css">
+    <link rel="stylesheet" href="resources/css/register.css">
 </head>
 <body>
     <div class="registerForm">
         <h1>Register</h1>
         <form action="/register" method="POST">
-            <label for="nombre">Nombre Compelto</label>
+            <div>
+                <label for="nombre">Nombre Compelto</label>
             <input type="text" id="nombre" name="nombre" required><br><br>
 
-            <label for="telefono">Telefono</label>
+            </div>
+            
+            <div>
+                <label for="telefono">Telefono</label>
             <input type="text" id="telefono" name="telefono" required><br><br>
+            </div>
+            
 
-
-            <label for="correo">Correo Electronico:</label>
+            <div>
+                <label for="correo">Correo Electronico:</label>
             <input type="text" id="correo" name="correo" required><br><br>
+            </div>
+            
 
-
-            <label for="direccion">Domicilio</label>
+            <div>
+                <label for="direccion">Domicilio</label>
             <input type="text" id="direccion" name="direccion" required><br><br>
+            </div>
+            
 
-
-            <label for="pass">Password:</label>
+            <div>
+                <label for="pass">Password:</label>
             <input type="password" id="pass" name="pass" required><br><br>
+            </div>
+            
+
             <button type="submit" class="btnRegistrar">Registrarse</button>
-            <a href="/">Home</a>
+            <a href="/">Inicio</a>
+
         </form>
     </div>
 

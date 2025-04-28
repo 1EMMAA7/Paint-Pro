@@ -1,0 +1,91 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Unispace', sans-serif;
+    background: linear-gradient(135deg, #0b0f3a, #2e1e57);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: hsl(44, 91%, 86%);
+}
+
+.loginForm {
+    background: rgba(43, 28, 77, 0.8); /* fondo semitransparente */
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px #8b3fa9;
+    width: 100%;
+    max-width: 400px;
+    backdrop-filter: blur(10px);
+    border: 1px solid #c07eb8;
+    transition: all 0.3s ease-in-out;
+}
+
+.loginForm:hover {
+    box-shadow: 0 0 25px #c07eb8;
+    transform: translateY(-3px);
+}
+
+.loginForm h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #ffffff;
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+.loginForm label {
+    display: block;
+    margin-bottom: 8px;
+    color: #cccccc;
+    font-weight: 500;
+}
+
+.loginForm input[type="text"],
+.loginForm input[type="password"] {
+    width: 95%;
+    padding: 12px;
+    border: 1px solid #8b3fa9;
+    border-radius: 10px;
+    background-color: #0b0f3a;
+    color: #fcebbd;
+    margin-bottom: 20px;
+    transition: border 0.3s ease;
+}
+
+.loginForm input[type="text"]:focus,
+.loginForm input[type="password"]:focus {
+    border-color: #c07eb8;
+    outline: none;
+}
+
+.btnLogin {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(to right, #8b3fa9, #c07eb8);
+    border: none;
+    border-radius: 10px;
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btnLogin:hover {
+    background: linear-gradient(to right, #c07eb8, #8b3fa9);
+    box-shadow: 0 0 10px #c07eb8;
+}
+
+.loginForm a {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    color: #fcebbd;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.loginForm a:hover {
+    color: #ffffff;
+}
