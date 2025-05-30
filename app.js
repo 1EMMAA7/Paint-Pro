@@ -130,7 +130,10 @@ app.post('/auth', async(req, res) =>{
 
 });
 
-
+//12.- API para login
+const authRoutes = require('./routes/authRoutes');
+app.use(express.json());
+app.use('/api/auth', authRoutes);
 
 
 app.listen(3000, (req, res) => {
