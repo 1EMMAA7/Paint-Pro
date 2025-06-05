@@ -3,7 +3,7 @@ const db = require('../config/db');
 exports.login = (req, res) => {
   const { email, password } = req.body;
 
-  const query = 'SELECT * FROM users WHERE email = ? AND password = ?';
+  const query = 'SELECT * FROM empleados WHERE email = ? AND password = ?';
   db.query(query, [email, password], (err, results) => {
     if (err) return res.status(500).json({ error: 'Error en el servidor' });
 
