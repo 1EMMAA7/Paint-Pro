@@ -70,6 +70,10 @@ app.get('/resanesParedes', (req, res) => {
     res.render('resanesParedes');
 })
 
+app.get('/indexAdmin', (req, res) =>{
+    res.render('indexAdmin')
+})
+
 
 //10.-Registrar un usuario
 app.post('/register', async (req, res) =>{
