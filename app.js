@@ -79,12 +79,12 @@ app.get('/indexAdmin', (req, res) =>{
 app.post('/register', async (req, res) =>{
     const nombre =  req.body.nombre;
     const telefono = req.body.telefono;
-    const correo = req.body.correo;
+    const email = req.body.email;
     const direccion = req.body.direccion;
-    const pass =  req.body.pass;
-    let passwordHash = await bcryptjs.hash(pass, 8);
-    conn.query('INSERT INTO clientes SET ?', {nombre:nombre, telefono:telefono ,correo:correo,
-        direccion:direccion, pass:passwordHash}, async(error, results) =>{
+    const password =  req.body.password;
+    let passwordHash = await bcryptjs.hash(password, 8);
+    conn.query('INSERT INTO clientes SET ?', {nombre:nombre, telefono:telefono ,email:email,
+        direccion:direccion, password:passwordHash}, async(error, results) =>{
             if(error){
                 console.log(error);
             }else{  
@@ -102,13 +102,13 @@ app.post('/register', async (req, res) =>{
 })
 
 //11. Auntentificacion de usuario
-app.post('/auth', async(req, res) =>{
-    const correo = req.body.correo;
-    const pass = req.body.pass;
-    let passwordHash = await bcryptjs.hash(pass, 8);
-    if(correo && pass){
-        conn.query('SELECT * FROM clientes WHERE correo = ?', [correo], async(error, results) =>{
-            if(results.length == 0|| !(await bcryptjs.compare(pass, results[0].pass))){
+app.post('/login', async(req, res) =>{
+    const email = req.body.email;
+    const password = req.body.password;
+    let passwordHash = await bcryptjs.hash(password, 8);
+    if(email && password){
+        conn.query('SELECT * FROM clientes WHERE email = ?', [email], async(error, results) =>{
+            if(results.length == 0|| !(await bcryptjs.compare(password, results[0].password))){
                 res.render('login',{
                     alert: true,
                     alertTitle: "Login Fallido",
@@ -126,7 +126,7 @@ app.post('/auth', async(req, res) =>{
                     alertIcon: "success",
                     showConfirmButton: false,
                     timer: 1500,
-                    ruta: ''
+                    ruta: 'solicitudServicio'
                 })
             }
         } )
