@@ -139,6 +139,12 @@ const authRoutes = require('./routes/authRoutes');
 app.use(express.json());
 app.use('/api/auth', authRoutes);
 
+//13.- API tickets
+const ticketRoutes = require('./routes/ticketRoutes');
+app.use(express.json());
+app.use('/api', ticketRoutes);
+
+
 
 app.listen(3000, (req, res) => {
     console.log('Servidor corriendo en el puerto http://localhost:3000');
