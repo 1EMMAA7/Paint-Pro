@@ -144,6 +144,10 @@ const ticketRoutes = require('./routes/ticketRoutes');
 app.use(express.json());
 app.use('/api', ticketRoutes);
 
+//14.- API cotizaciones
+const cotizacionRoutes = require('./routes/cotizaionRoutes')
+app.use(express.json());
+app.use('/api', cotizacionRoutes)
 
 
 app.listen(3000, (req, res) => {
